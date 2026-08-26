@@ -100,3 +100,29 @@ body{
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0.6);
 }
+
+.container .controls #play{
+    background-color: #1db954;
+    color: #fff;
+    padding: 15px 15px 14px 17px;
+    font-size: 28px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.container .controls #play:hover{
+    background: #189945;
+}
+
+.container .controls i{
+    padding: 30px 8px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #919191;
+    transition: all 0.3s ease;
+}
+
+.container .controls i:hover{
+    color: #fff;
+}
+
