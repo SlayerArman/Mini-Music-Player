@@ -21,7 +21,7 @@ The player currently contains three songs:
 | 3 | Around The World | Sabrina Carpenter |
 
 
-## 🛠️ Technologies Used:
+## Technologies Used:
 
 - HTML
 - CSS
