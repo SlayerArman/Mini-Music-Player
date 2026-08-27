@@ -28,3 +28,25 @@ const playBtn = document.getElementById('.play');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
 const prog = document.querySelector('.progress-bar');
+
+let song = new Audio();
+let currentSong = 0;
+let playing = false;
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadSong(currentSong);
+    song.addEventListener('timeupdate', updateProgress);
+    song.addEventListener('ended', nextSong);
+    prevBtn.addEventListener('click', prevSong);
+    nextBtn.addEventListener('click', nextSong);
+    playBtn.addEventListener('click', togglePlayPause);
+    prog.addEventListener('click', seek); 
+});
+
+function loadSong(index){
+    const { name, artist, src, cover: thumb} = songList[index];
+    atristName.innerText = artist;
+    musicName.innerText = name;
+    song.src = src;
+    cover.style.backgroundImage = `url(${thumb})`;
+}
