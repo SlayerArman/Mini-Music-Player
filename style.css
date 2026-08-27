@@ -23,15 +23,15 @@ body{
 }
 
 .container .song-info .song-name{
-    color: #b9b9b9;
-    font-size: 14px;
-    margin: 3px 0 20px; 
-}
-
-.container  .song-info .artist-name{
     color: #fff;
     font-weight: bold;
     font-size: 18px;
+}
+
+.container  .song-info .artist-name{
+    color: #b9b9b9;
+    font-size: 14px;
+    margin: 3px 0 20px;
 }
 
 .container .song-info .progress-bar{
