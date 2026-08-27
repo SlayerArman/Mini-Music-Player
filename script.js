@@ -19,12 +19,12 @@ const songList = [
     }
 ];
 
-const atristName = document.querySelector('.artisat-name');
 const musicName = document.querySelector('.song-name');
+const atristName = document.querySelector('.artist-name');
 const fillBar = document.querySelector('.fill-bar');
-const time = document.querySelector('time');
-const cover = document.getElementById('.cover');
-const playBtn = document.getElementById('.play');
+const time = document.querySelector('.time');
+const cover = document.getElementById('cover');
+const playBtn = document.getElementById('play');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
 const prog = document.querySelector('.progress-bar');
@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function loadSong(index){
     const { name, artist, src, cover: thumb} = songList[index];
-    atristName.innerText = artist;
     musicName.innerText = name;
+    atristName.innerText = artist;
     song.src = src;
     cover.style.backgroundImage = `url(${thumb})`;
 }
@@ -58,7 +58,7 @@ function updateProgress(){
 
         const duration = formatTime(song.duration);
         const currentTime = formatTime(song.currentTime);
-        time.innerTExt = `${currentTime} - ${duration}`;
+        time.innerText = `${currentTime} - ${duration}`;
     }
 }
 
@@ -66,4 +66,39 @@ function formatTime(seconds){
     const minutes = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
     return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+}
+
+function togglePlayPause(){
+    if(playing){
+        song.pause();
+    } else {
+        song.play();
+    }
+    playing = !playing;
+    playBtn.classList.toggle('fa-pause', playing);
+    playBtn.classList.toggle('fa-play', !playing);
+    cover.classList.toggle('active', playing);
+}
+
+function nextSong(){
+    currentSong = (currentSong + 1) % songList.length;
+    playMusic();
+}
+
+function prevSong(){
+    currentSong = (currentSong - 1 + songList.length) % songList.length;
+    playMusic();
+}
+
+function playMusic(){
+    localSong(currentSong);
+    song.play();
+    playBtn.classList.add('fa-pause');
+    playBtn.classList.remove('fa-play');
+    cover.classList.add('active');
+}
+
+function seek(e){
+    const pos = (e.offsetX / prog.clientWidth) * song.duration;
+    song.currentTime = pos;
 }
