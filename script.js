@@ -48,7 +48,10 @@ function loadSong(index){
     musicName.innerText = name;
     atristName.innerText = artist;
     song.src = src;
+    song.load();
     cover.style.backgroundImage = `url(${thumb})`;
+    fillBar.style.width = '0%';
+    time.innerText = '0:00 - 0:00';
 }
 
 function updateProgress(){
@@ -74,6 +77,7 @@ function togglePlayPause(){
     } else {
         song.play();
     }
+
     playing = !playing;
     playBtn.classList.toggle('fa-pause', playing);
     playBtn.classList.toggle('fa-play', !playing);
@@ -91,14 +95,17 @@ function prevSong(){
 }
 
 function playMusic(){
-    localSong(currentSong);
+    loadSong(currentSong);
     song.play();
+    playing = true;
+
     playBtn.classList.add('fa-pause');
     playBtn.classList.remove('fa-play');
     cover.classList.add('active');
 }
 
 function seek(e){
+    if (!song.duration) return;
     const pos = (e.offsetX / prog.clientWidth) * song.duration;
     song.currentTime = pos;
 }

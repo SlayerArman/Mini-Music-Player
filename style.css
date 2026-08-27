@@ -18,7 +18,7 @@ body{
 .container .song-info{
     background-color: #000;
     margin: 0 15px;
-    padding: 15px 15x 5px 150px;
+    padding: 15px 15px 5px 150px;
     border-radius: 15px 15px 0 0;
 }
 
@@ -98,7 +98,7 @@ body{
     height: 100px;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0.6);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 .container .controls #play{
