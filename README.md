@@ -10,6 +10,11 @@ This project provides a clean music-player interface where users can play songs,
 **You can use this music player as a small overlay in your websites by adding this code to your website.**
 
 
+## Screenshots:
+<img width="497" height="307" alt="Screenshot 2026-08-27 133411" src="https://github.com/user-attachments/assets/e141f13f-9924-4717-8477-2f94624db560" />
+<img width="525" height="304" alt="Screenshot 2026-08-27 133443" src="https://github.com/user-attachments/assets/2f1a7146-409f-4bf1-b254-94511a337823" />
+
+
 ## 🎧 Current Songs
 
 The player currently contains three songs:
