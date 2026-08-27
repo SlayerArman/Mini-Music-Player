@@ -50,3 +50,20 @@ function loadSong(index){
     song.src = src;
     cover.style.backgroundImage = `url(${thumb})`;
 }
+
+function updateProgress(){
+    if(song.duration){
+        const pos = (song.currentTime / song.duration) * 100;
+        fillBar.style.width = `${pos}%`;
+
+        const duration = formatTime(song.duration);
+        const currentTime = formatTime(song.currentTime);
+        time.innerTExt = `${currentTime} - ${duration}`;
+    }
+}
+
+function formatTime(seconds){
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+}
