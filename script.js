@@ -13,9 +13,27 @@ const songList = [
     },
     {
         name: "Around The World",
-        artist: "Sabrina Carpenter",
+        artist: "Draft Punk",
         src: "assets/3.mp3",
         cover: "assets/3.jpg"
+    },
+    {
+        name: "Базовый минимум (Slowed)",
+        artist: "SABI + MIA BOYKA",
+        src: "assets/4.mp3",
+        cover: "assets/4.jpg"
+    },
+    {
+        name: "REBOLATON (slowed)",
+        artist: "RXVEN",
+        src: "assets/5.mp3",
+        cover: "assets/5.jpg"
+    },
+    {
+        name: "Deep Atmosphere 1 (Slowed",
+        artist: "Games In Space Studio",
+        src: "assets/6.mp3",
+        cover: "assets/6.jpg"
     }
 ];
 
