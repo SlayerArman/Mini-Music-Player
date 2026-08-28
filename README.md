@@ -15,7 +15,7 @@ This project provides a clean music-player interface where users can play songs,
 <img width="525" height="304" alt="Screenshot 2026-08-27 133443" src="https://github.com/user-attachments/assets/2f1a7146-409f-4bf1-b254-94511a337823" />
 
 
-## 🎧 Current Songs
+## Current Songs
 
 The player currently contains three songs:
 
@@ -45,7 +45,7 @@ The player currently contains three songs:
 }
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 Mini Music Player/
